@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* gototop */
+
+
+body {
+/* background-image: url("../img/bg/big_bg.png");*/
+ background-color: #FFADAD;
+background-repeat:no-repeat;	
+}
+
+
+
+.showgif {
+  background-image:url("../img/bg/bg_01.png");
+　width: 100px;
+	height: 800px;
+	background-repeat:no-repeat;
+
+}
+
+
+
+
+
+.infocard {
+	color: #121212;
+width: 360px;
+height: auto;
+margin: auto;
+}
+
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+	z-index: 99;
+}
+
+
+
+/* CSS Document */
+
+.footer_bg {
+	background-color:#0b0e11;
+	width:100%;
+	height: 100px;
+}
+
+
+.black_bg {
+	background-color:#0b0e11;
+	width:100%;
+}
+
+
+.item_bg {
+	background-color:#f1f1f1;
+	width:96%;
+	margin: auto;
+}
+
+
+.white_bg {
+	background-color:#f1f1f1;
+	width:100%;
+}
+
+
+.grey_bg {
+	background-color:#D3D3D3;
+	width:100%;
+}
+
+
+.article_01 {
+font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';	
+text-align: center;
+font-size: 20px;
+color:#333333;
+}
+
+
+
+.title_00 {
+font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';	
+text-align: center;
+font-size: 30px;
+color:#FF7600;
+}
+
+
+
+.title_01 {
+font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';	
+text-align: center;
+font-size: 30px;
+color:#333333;
+}
+
+.time_01 {
+font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';	
+text-align: center;
+font-size: 30px;
+color:#FF6700;
+}
+
+
+
+
+
+
+.info_00 {
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+color:#000;
+}
+
+.info_01 {
+font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';	
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 15px;
+color:#006DEF;
+}
+
+.info_02 {
+margin-top: 10px;
+margin-bottom: 10px;	
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 15px;
+color:#FFA100;
+}
+
+
+.info_03 {
+margin-top: 10px;
+margin-bottom: 10px;	
+font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 15px;
+color:#FFA100;
+}
+
+
+.showcard {	
+width: 100%;
+margin: auto;
+height: 120;
+background-color: #fff;
+box-shadow: 0px 0px 6px rgba(96, 96, 96, 0.2);
+border-radius: 5px;		
+}
+
+
+meter {
+    width: 90%;
+	
+}
+
+
+.g-container {
+	
+    width: 100px;
+    height: 10px;
+    border-radius: 25px;
+    background: #eee;
+}
+.g-progress {
+    width: 50%;
+    height: inherit;
+    border-radius: 25px 0 0 25px;
+    background: #0f0;
+}
+
+
+
+
+/**手機板**/
+
+.container_m {
+
+  max-width: 414px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.showcard_m {	
+width: 120px;
+height: auto;
+background-color: #fff;
+box-shadow: 0px 0px 10px rgba(96, 96, 96, 0.2);
+border-radius: 5px;	
+		
+}
+
+
+
+
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}

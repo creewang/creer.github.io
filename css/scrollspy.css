@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+section {min-height:600px; padding-top:60px;}
+#section2,#section4 {background-color:lightgray;}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  color: #fff; background-color: #117e90;
+}
