@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>抽獎活動</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .close-btn {
+        width: 0px;
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        border-radius: 100%;
+        background: #d75f70;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        line-height: 40px;
+        font-size: 60px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+        /* Chrome Safari */
+    }
+
+    @media screen and (min-width: 461px) {
+        body {
+            background: url("./img/bg_03.png") no-repeat;
+            margin-top: 60%;
+            background-size: 100%
+        }
+
+        .rightTop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            text-align: right;
+            width: 10%;
+        }
+
+        .roulette {
+            margin-top: -50%;
+        }
+
+        #bg {
+            width: 360px;
+            height: 360px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        img[src^="./img/pointer.png"] {
+            position: absolute;
+            z-index: 10;
+            top: 125px;
+            left: 135px;
+            width: 25%;
+        }
+
+        .text1 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #b1604f;
+        }
+
+        .gif1 {
+            width: 15%;
+            margin-top: 0.5%;
+        }
+
+        .imgpre {
+            width: 300px;
+        }
+
+        .pdl33 {
+            padding-left: 0%;
+        }
+
+        .modal-dialog {
+            max-width: 360px;
+            margin: 1.75rem auto;
+        }
+
+        .close-btn {
+            width: 0px;
+            display: inline-block;
+            position: absolute;
+            top: -15px;
+            right: -40px;
+            border-radius: 100%;
+            background: #d75f70;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            line-height: 40px;
+            font-size: 26px;
+        }
+
+    }
+
+    @media screen and (max-width: 460px) {
+
+        html,
+        body {
+            overflow-x: hidden;
+            margin: 0px;
+        }
+
+        body {
+            background: url("./img/bg_01.png") no-repeat;
+            margin-top: 60%;
+            background-size: 100%;
+        }
+
+        .rightTop {
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
+            width: 20%;
+        }
+
+        .roulette {
+            margin-top: 20%;
+        }
+
+        #bg {
+            width: 360px;
+            height: 300px;
+            margin: 0 auto;
+            /* background: url(img/turntable-bg.png) no-repeat; */
+            position: relative;
+        }
+
+        img[src^="./img/pointer.png"] {
+            position: absolute;
+            z-index: 10;
+            width: 25%;
+            top: 75px;
+            left: 135px;
+        }
+
+        .text1 {
+            font-size: 5vw;
+            font-weight: 600;
+            color: #b1604f;
+        }
+
+        .gif1 {
+
+            width: 60%;
+            margin-top: 8%;
+        }
+
+        img[src^="./img/turntable.png"] {
+            position: absolute;
+            z-index: 5;
+            transition: all 3s;
+            top: -20%;
+        }
+
+        .imgpre {
+            width: 100%;
+        }
+
+        .close-btn {
+            width: 0px;
+            display: inline-block;
+
+            position: absolute;
+            top: 0px;
+            right: 40px;
+            border-radius: 100%;
+            background: #d75f70;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            line-height: 40px;
+            font-size: 30px;
+        }
+    }
+
+
+
+    img[src^="./img/turntable.png"] {
+        position: absolute;
+        z-index: 5;
+        transition: all 3s;
+    }
+
+
+    .snow-container {
+        position: absolute;
+        height: 100%;
+        width: 95%;
+        max-width: 100%;
+        top: 0;
+        overflow: hidden;
+        z-index: 12;
+        pointer-events: none;
+    }
+
+    .snow {
+        display: block;
+        position: absolute;
+        z-index: 12;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        -webkit-animation: snow linear infinite;
+        animation: snow linear infinite;
+    }
+
+    .snow.foreground {
+        background-image: url("img/snow1.png");
+        -webkit-animation-duration: 7.5s;
+        animation-duration: 7.5s;
+    }
+
+    .snow.foreground.layered {
+        -webkit-animation-delay: 4s;
+        animation-delay: 4s;
+    }
+
+    .snow.middleground {
+        background-image: url("img/snow2.png");
+        -webkit-animation-duration: 10s;
+        animation-duration: 10s;
+    }
+
+    .snow.middleground.layered {
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+    }
+
+    .snow.background {
+        background-image: url("img/snow3.png");
+        -webkit-animation-duration: 15s;
+        animation-duration: 15s;
+    }
+
+    .snow.background.layered {
+        -webkit-animation-delay: 7.5s;
+        animation-delay: 7.5s;
+    }
+
+    @-webkit-keyframes snow {
+        0% {
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+        }
+
+        100% {
+            -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+        }
+    }
+
+    @keyframes snow {
+        0% {
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+        }
+
+        100% {
+            -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+        }
+    }
+</style>
+
+<body>
+    <div>
+
+        <div class="snow-container">
+            <div class="snow foreground"></div>
+            <div class="snow foreground layered"></div>
+            <div class="snow middleground"></div>
+            <div class="snow middleground layered"></div>
+            <div class="snow background"></div>
+            <div class="snow background layered"></div>
+        </div>
+        <div class="roulette">
+            <div id="bg">
+                <div style="text-align: center;">
+                    <img src="./img/pointer.png" alt="pointer">
+                </div>
+                <div>
+                    <img style="width: 100%;" src="./img/turntable.png" alt="turntable">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rightTop">
+       <a href="#"> <img src="./img/return.png" alt="" style="width: 70%;"></a>
+    </div>
+
+    <div style="text-align: center;top: 50%;">
+        <div class="text1"> 開獎輪盤 </div>
+        <img class="gif1" src="./img/scorll.gif" alt="">
+    </div>
+    <div class="modal fade" id="quickMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content pdl33">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button> -->
+                    <a class="close-btn" data-bs-dismiss="modal" aria-label="Close" href="#">X</a>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <img src="./img/show.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 這裡是js部分 -->
+
+
+</body>
+
+
+<script type="text/javascript" charset="utf8" src="./js/roulette.js"></script>
+
+
+</html>
