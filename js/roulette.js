@@ -56,48 +56,48 @@
                         day = "1227";
                     }
                     if (num <= cat * 1) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_01.png");
+                        $("#img_pre").attr("src", "img/prize/show_01.png");
                         $('#quickMenu').modal('show');
 
                         // alert("1 / " + num);
                     } else if (num <= cat * 2) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_02.png");
+                        $("#img_pre").attr("src", "img/prize/show_02.png");
                         $('#quickMenu').modal('show');
 
                         // alert("2 / " + num);
                     } else if (num <= cat * 3) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_03.png");
+                        $("#img_pre").attr("src", "img/prize/show_03.png");
                         $('#quickMenu').modal('show');
                         // alert("3 / " + num);
                     } else if (num <= cat * 4) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_04.png");
+                        $("#img_pre").attr("src", "img/prize/show_04.png");
                         $('#quickMenu').modal('show');
 
                         // alert("4 / " + num);
                     } else if (num <= cat * 5) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_05.png");
+                        $("#img_pre").attr("src", "img/prize/show_05.png");
                         $('#quickMenu').modal('show');
                         // alert("5 / " + num);
                     } else if (num <= cat * 6) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_06.png");
+                        $("#img_pre").attr("src", "img/prize/show_06.png");
                         $('#quickMenu').modal('show');
 
                         // alert("6 / " + num);
                     } else if (num <= cat * 7) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_07.png");
+                        $("#img_pre").attr("src", "img/prize/show_07.png");
                         $('#quickMenu').modal('show');
 
                         // alert("7 / " + num);
                     } else if (num <= cat * 8) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_08.png");
+                        $("#img_pre").attr("src", "img/prize/show_08.png");
                         $('#quickMenu').modal('show');
                         // alert("8 / " + num);
                     } else if (num <= cat * 9) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_09.png");
+                        $("#img_pre").attr("src", "img/prize/show_09.png");
                         $('#quickMenu').modal('show');
                         // alert("9 / " + num);
                     } else if (num <= cat * 10) {
-                        $("#img_pre").attr("src", "img/prize/"+ day +"/show_10.png");
+                        $("#img_pre").attr("src", "img/prize/show_10.png");
                         $('#quickMenu').modal('show');
                         // alert("10 / " + num);
                     }
