@@ -5221,7 +5221,7 @@ textarea.form-control-lg {
   z-index: 1060;
   display: none;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
@@ -5253,7 +5253,7 @@ textarea.form-control-lg {
   height: calc(100% - 1rem);
 }
 .modal-dialog-scrollable .modal-content {
-  max-height: 100%;
+  mix-width: 100%;
   overflow: hidden;
 }
 .modal-dialog-scrollable .modal-body {
